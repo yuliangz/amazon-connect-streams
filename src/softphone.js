@@ -86,6 +86,7 @@
                if (connect.core.getSoftphoneUserMediaStream()) {
                     session.mediaStream = connect.core.getSoftphoneUserMediaStream();
                }
+               session.forceAudioCodec = 'PCMU';
                session.onSessionFailed = function(rtcSession, reason) {
                    if (reason === connect.RTCErrors.ICE_COLLECTION_TIMEOUT) {
                         var endPointUrl = "\n";
